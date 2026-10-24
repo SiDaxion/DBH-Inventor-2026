@@ -1,147 +1,94 @@
 # DBH Inventor 2026
 
-**Schooleigen CAD-configuratie voor Autodesk Inventor 2026**  
-Don Bosco Hoboken · Afdeling Mechanica en Lassen
+**Schooleigen CAD-omgeving voor Autodesk Inventor 2026**  
+Don Bosco Hoboken | Afdeling Mechanica en Lassen
 
-DBH Inventor 2026 bevat de CAD-sjablonen, tekenstandaarden, materialenbibliotheek en projectinstellingen van Don Bosco Hoboken. Eén installatieprogramma stelt Inventor in voor de aangemelde Windows-gebruiker. Nieuwe DBH-versies worden bij het starten automatisch gecontroleerd via GitHub.
+DBH Inventor 2026 richt Autodesk Inventor 2026 in volgens de CAD-standaarden van de school. Leerlingen en leerkrachten kunnen via één bureaubladsnelkoppeling met de juiste projectinstellingen, sjablonen en materialen werken. De toepassing controleert de beheerde schoolbestanden, kan deze zo nodig veilig herstellen en controleert op goedgekeurde stabiele updates.
 
-> **Belangrijk:** Dit pakket installeert **Autodesk Inventor 2026 zelf niet**. Inventor 2026 moet vooraf geïnstalleerd zijn en correct gelicentieerd worden gebruikt.
+> **Let op:** DBH Inventor 2026 installeert Autodesk Inventor zelf niet en verstrekt geen Autodesk-licentie. Autodesk Inventor 2026 moet al correct geïnstalleerd en gelicentieerd zijn.
+
+## Wat bevat DBH Inventor 2026?
+
+- Schooleigen sjablonen voor onderdelen, plaatwerk, samenstellingen, lasconstructies, tekeningen en presentaties.
+- Bijbehorende **Design Data**, materialenbibliotheek en Application Options.
+- Een persoonlijk Inventor-project met afzonderlijke **Werkmap** en **ContentCenter**.
+- Een grafisch startprogramma dat de CAD-omgeving controleert, updates verwerkt en Inventor opstart.
+- Controle en herstel van beheerde schoolbestanden, met bescherming van persoonlijke CAD-bestanden.
+
+## Vereisten
+
+- Een Windows-computer met een ondersteunde 64-bits omgeving.
+- **Autodesk Inventor 2026**, vooraf geïnstalleerd en correct gelicentieerd.
+- Een toegankelijk persoonlijk Windows-gebruikersprofiel met opslagruimte voor de Werkmap en ContentCenter.
+- Internettoegang voor het ophalen van de installatiebestanden en automatische updates. Een reeds volledige en gecontroleerde installatie kan bij tijdelijke onbereikbaarheid van GitHub doorgaans lokaal starten.
+
+De DBH-hoofdsoftware wordt **per Windows-gebruiker** geïnstalleerd. Voor de gebruikelijke installatie in het eigen profiel zijn geen beheerdersrechten vereist. Beveiligingsbeleid op beheerde schoolcomputers kan aanvullende toestemming of toelating door ICT vereisen.
 
 ## Installeren
 
-1. Open de pagina [Releases](https://github.com/SvenDobbels/DBH-Inventor-2026/releases).
-2. Open de recentste vrijgegeven versie en download onder **Assets** het bestand `DBH_Inventor_2026_<versie>_Setup.exe`.
-3. Sluit Autodesk Inventor volledig af en voer de gedownloade EXE uit.
-4. Doorloop de installatie. Er zijn voor deze installatie in het eigen gebruikersprofiel geen beheerdersrechten nodig.
-5. Start voortaan via de bureaubladsnelkoppeling **Inventor 2026 - DBH Mechanica**.
+1. Open de [GitHub Releases](https://github.com/SiDaxion/DBH-Inventor-2026/releases).
+2. Kies de **nieuwste stabiele release van de hoofdsoftware** en download het bijbehorende installatiebestand (`Setup.exe`) onder **Assets**. De apart aangeduide schoolbootstrap is niet dezelfde installatie.
+3. Sluit Autodesk Inventor volledig af.
+4. Voer het installatiebestand uit en doorloop de stappen.
+5. Start de toepassing via de bureaubladsnelkoppeling **Inventor 2026 - DBH Mechanica**.
 
-De installer stelt de lokale CAD-configuratie en het persoonlijke Inventor-project automatisch in. Bij een eerste overstap vanuit een oudere DBH-versie worden bestaande werkbestanden waar mogelijk gecontroleerd gekopieerd; de oude werkbestanden worden daarbij niet automatisch verwijderd.
+Gebruik bij voorkeur de door school-ICT voorgeschreven installatiewijze als de computer centraal beheerd wordt.
 
-**Voorwaarden:** Windows met Autodesk Inventor 2026 en toegang tot de persoonlijke Windows-map **Documenten**. Voor automatische updates is een internetverbinding nodig. De Documenten-map kan door Windows of de school via OneDrive zijn gesynchroniseerd.
+## Starten, controleren en bijwerken
 
-> **Windows-beveiliging:** Omdat de installatie-EXE momenteel geen vertrouwde digitale uitgevershandtekening heeft, kan Microsoft Defender SmartScreen een waarschuwing tonen. Controleer steeds dat de download afkomstig is van deze repository. Schakel SmartScreen niet uit.
+De grafische DBH-launcher doorloopt vier stappen:
 
-## Starten en automatische updates
+**Controleren → Updates → Voorbereiden → Inventor starten**
 
-Bij het openen van de DBH-snelkoppeling:
+Bij het starten controleert DBH de installatie en de beheerde schoolstandaarden. Ontbrekende of afwijkende bestanden kunnen worden hersteld vanuit een gecontroleerde lokale installatiebron. Afwijkende, niet-herkende schoolbestanden worden waar nodig eerst veilig gearchiveerd. Persoonlijke CAD-werkbestanden maken geen deel uit van deze opschoning.
 
-1. Controleert het startprogramma de lokaal beheerde DBH-bestanden met **SHA-256**.
-2. Probeert het gewijzigde of ontbrekende installatiebestanden automatisch te herstellen.
-3. Controleert het de openbare GitHub Releases op een nieuwere versie.
-4. Downloadt en installeert het een beschikbare, verifieerbare update automatisch.
-5. Past het de persoonlijke projectinstellingen toe en start het Autodesk Inventor 2026.
+DBH controleert via GitHub of er een nieuwere, goedgekeurde **stabiele** hoofdrelease beschikbaar is. Updates worden gecontroleerd op onder meer versie, bestandsgrootte en SHA-256 voordat de installatie verdergaat. Er wordt niet automatisch naar een oudere versie of een prerelease overgeschakeld.
 
-Het PowerShell-venster toont de geïnstalleerde versie, eventuele updateversie en de voortgang.
+De technische details van de opstartcontrole zijn afzonderlijk beschikbaar in de launcher.
 
-> **SLUIT HET POWERSHELL-VENSTER NIET** zolang de installatiecontrole, een update of de opstart bezig is. Het venster sluit vanzelf na een succesvolle opstart.
+## Persoonlijke Werkmap en ContentCenter
 
-Als GitHub tijdelijk niet bereikbaar is, kan een **lokaal volledig gecontroleerde installatie** normaal blijven starten. Bij een onvolledige installatie of een mislukte update wordt Inventor niet met beschadigde DBH-instellingen gestart.
+Persoonlijke CAD-bestanden worden gescheiden gehouden van de beheerde installatiebestanden. DBH gebruikt daarvoor een locatie onder de persoonlijke **Documenten**-map of, wanneer geschikt en beschikbaar, de **school-OneDrive**.
 
-**OneDrive is geen updatebron.** Alleen de persoonlijke bestanden onder Documenten kunnen via OneDrive worden gesynchroniseerd. Elke Windows-gebruiker heeft een eigen lokale DBH-installatie.
+Bij de eerste inrichting krijgt de geschikte school-OneDrive de voorkeur. Anders wordt Windows Documenten gebruikt. Een bestaande opslaglocatie wordt niet stilzwijgend verplaatst. Als de school-OneDrive later beschikbaar komt, kan DBH een gecontroleerde migratie voorstellen met de keuzes **Migreren** en **Nu niet**.
 
-## Mappenstructuur
-
-### 1. Lokale installatie
-
-De CAD-standaarden en scripts staan in:
-
-`%LOCALAPPDATA%\DBH_Inventor_2026\`
+De persoonlijke opslag heeft deze indeling:
 
 ```text
-DBH_Inventor_2026
-├── Configuratie
-├── Design Data
-├── Materialen
-├── Templates
-├── DBH_Inventor_2026.ipj      (persoonlijk gegenereerd project)
-├── DBH_ProjectBasis.ipj       (projectbasis)
-├── DBH_Start.ps1
-├── DBH_Config.ps1
-├── DBH_Controle.ps1
-└── Overige DBH-configuratie- en versiegegevens
+DBH_Inventor_2026/
+├── Werkmap/
+│   ├── Onderdelen/
+│   ├── Samenstellingen/
+│   ├── Tekeningen/
+│   └── Presentaties/
+└── ContentCenter/
 ```
 
-Hier staan **geen persoonlijke CAD-werkbestanden**. Beheerde bestanden worden bij het starten op integriteit gecontroleerd. Wijzig sjablonen of standaardbestanden daarom niet rechtstreeks in deze map.
+De werkelijke locatie wordt door Windows en de bestaande DBH-configuratie bepaald. **Verplaats of verwijder deze mappen niet handmatig zonder een geschikte back-up en controle.**
 
-### 2. Persoonlijke CAD-bestanden
+De beheerde programmabestanden en technische componenten staan afzonderlijk onder `%LOCALAPPDATA%`. Een onafhankelijk archief kan daar eveneens worden bijgehouden.
 
-De persoonlijke bestanden staan onder de werkelijke Windows-map **Documenten**:
+## Schooluitrol en ICT
 
-`Documenten\DBH_Inventor_2026\`
+Voor centraal beheerde leerlingcomputers bestaat een **afzonderlijk onderhouden schoolbootstrap**. ICT kan hiermee de voorbereiding en eerste installatie per aangemelde Windows-gebruiker organiseren. De bootstrap en de volledige hoofdsoftware hebben een eigen versienummer en een afzonderlijke release.
 
-```text
-DBH_Inventor_2026
-├── ContentCenter
-└── Werkmap
-    ├── Onderdelen
-    ├── Samenstellingen
-    ├── Tekeningen
-    └── Presentaties
-```
+De bootstrap is geen vervanging voor Autodesk Inventor 2026. Voor schooluitrol moeten ICT-beleid, gebruikersrechten, SmartScreen en andere Windows-beveiligingsmaatregelen worden gerespecteerd. Raadpleeg de technische informatie en bijbehorende bestanden van de toepasselijke [bootstraprelease](https://github.com/SiDaxion/DBH-Inventor-2026/releases).
 
-| Map | Inhoud |
-| --- | --- |
-| `ContentCenter` | Door Inventor gegenereerde Content Center-onderdelen |
-| `Werkmap\Onderdelen` | Onderdeelbestanden (`.ipt`) |
-| `Werkmap\Samenstellingen` | Samenstellingsbestanden (`.iam`) |
-| `Werkmap\Tekeningen` | Tekeningen (`.idw`) |
-| `Werkmap\Presentaties` | Presentaties (`.ipn`) |
+## Verwijderen
 
-**Let op:** `ContentCenter` staat **naast** `Werkmap`, niet erin.
+Verwijder **DBH Inventor 2026** via **Windows-instellingen → Apps → Geïnstalleerde apps**.
 
-Het daadwerkelijke pad naar Documenten wordt door Windows bepaald en kan bijvoorbeeld in een OneDrive-locatie liggen. De configuratie gebruikt daarom geen vaste Windows-gebruikersnaam.
+De verwijderprocedure ruimt de door DBH beheerde installatie- en beheeronderdelen op. **Persoonlijke Werkmap, ContentCenter en bestanden in de school-OneDrive blijven behouden.** Ook het onafhankelijke archief wordt niet automatisch als persoonlijke werkmap behandeld. Autodesk Inventor 2026 zelf wordt niet verwijderd.
 
-### 3. Lokaal installatiebeheer
+## Ondersteuning en versies
 
-Technische logboeken, de launcher en herstelbestanden bevinden zich afzonderlijk in:
+- [Releases en downloadbestanden](https://github.com/SiDaxion/DBH-Inventor-2026/releases)
+- [Problemen melden of verbeteringen voorstellen](https://github.com/SiDaxion/DBH-Inventor-2026/issues)
 
-`%LOCALAPPDATA%\DBH_Inventor_2026_Beheer\`
+De **releaseopmerkingen** bevatten per versie de nieuwe functies, verbeteringen, opgeloste problemen en eventuele installatieaandachtspunten. Deze README beschrijft de algemene werking en wordt alleen aangepast wanneer de productwerking of installatieprocedure structureel verandert.
 
-```text
-DBH_Inventor_2026_Beheer
-├── Herstel
-├── DBH_Launcher.ps1
-└── Log-, status- en beheerbestanden
-```
-
-Deze map bevat geen persoonlijke CAD-projecten.
-
-## Deïnstalleren
-
-Open **Windows-instellingen → Apps → Geïnstalleerde apps**, zoek **DBH Inventor 2026** en kies **Verwijderen**.
-
-De uninstaller verwijdert de door DBH beheerde lokale installatie, de bijbehorende beheerbestanden en de DBH-bureaubladsnelkoppeling. **Autodesk Inventor 2026 zelf wordt niet verwijderd.**
-
-> **Persoonlijke bestanden blijven behouden:** `Documenten\DBH_Inventor_2026\Werkmap` en `Documenten\DBH_Inventor_2026\ContentCenter` worden niet door de uninstaller verwijderd. Verwijder ze alleen zelf, na controle dat je ze niet meer nodig hebt.
-
-Onbekende, niet door de installer beheerde bestanden in de lokale installatiemap worden veiligheidshalve niet zomaar gewist. Daardoor kan uitzonderlijk een restmap achterblijven.
-
-## Problemen en verbeteringen melden
-
-Gebruik [GitHub Issues](https://github.com/SvenDobbels/DBH-Inventor-2026/issues) om een fout of verbeterpunt te melden. Vermeld bij voorkeur:
-
-- De gebruikte DBH-versie.
-- Wat je probeerde te doen.
-- De exacte foutmelding en de stappen waarmee je het probleem kunt herhalen.
-
-Voeg geen persoonsgegevens, wachtwoorden of vertrouwelijke leerlingbestanden toe aan een openbaar issue.
-
-## Voor ICT en beheerders
-
-De installatie vindt plaats **per Windows-gebruiker** in `%LOCALAPPDATA%`. Een stille installatie is mogelijk in de context van de aangemelde gebruiker, bijvoorbeeld:
-
-```powershell
-DBH_Inventor_2026_2.0-rc.1_Setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
-```
-
-Voer die installatie niet onder het `SYSTEM`-account uit wanneer de installatie voor het profiel van de aangemelde leerling bedoeld is. Bij gebruikersprofielen die na afmelden worden gewist, moet de installatie bij een volgende aanmelding opnieuw worden voorzien.
-
-Voor het zelf bouwen van een installatiepakket: pak het goedgekeurde DBH-bouwpakket uit, voer `DBH_Bouw_EXE.cmd` uit en controleer het bouwrapport. Hiervoor is **Inno Setup 6.3 of nieuwer** nodig. Publiceer een nieuwe EXE pas na de nodige integriteits- en Windows-/Inventor-tests als nieuwe GitHub Release met de bijbehorende versietag.
-
-## Versies
-
-**Actuele bevestigde referentieversie: `2.0-rc.1`.** Dit is een releasecandidate. Downloadbare versies staan onder [Releases](https://github.com/SvenDobbels/DBH-Inventor-2026/releases); openstaande verbeterpunten onder [Issues](https://github.com/SvenDobbels/DBH-Inventor-2026/issues).
+Vermeld bij een foutmelding de gebruikte DBH-versie, de uitgevoerde handeling en de exacte melding. Deel geen wachtwoorden, persoonsgegevens of vertrouwelijke leerlingbestanden in openbare GitHub Issues.
 
 ---
 
-*DBH Inventor 2026 is een schooleigen configuratie van Don Bosco Hoboken voor gebruik met Autodesk Inventor 2026. Het is geen afzonderlijke Autodesk-softwarelicentie.*
+*DBH Inventor 2026 is een schooleigen configuratie voor Autodesk Inventor 2026. Het is geen officieel Autodesk-product en bevat geen Autodesk-softwarelicentie.*
